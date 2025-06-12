@@ -1,0 +1,123 @@
+<h1 id="c语言基础语法入门">C语言基础语法入门</h1>
+
+<p>C语言作为一门经典的编程语言，至今仍然被广泛使用。本文将介绍C语言的基础语法知识，帮助初学者快速入门。</p>
+
+<h2 id="1-基本结构">1. 基本结构</h2>
+
+<p>一个最简单的C语言程序如下：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello, World!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>这个程序包含了C语言程序的基本要素：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">#include</code> 预处理指令</li>
+  <li><code class="language-plaintext highlighter-rouge">main()</code> 函数</li>
+  <li>基本的输入输出函数</li>
+</ul>
+
+<h2 id="2-变量和数据类型">2. 变量和数据类型</h2>
+
+<p>C语言中的基本数据类型包括：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">int</code>：整数类型</li>
+  <li><code class="language-plaintext highlighter-rouge">float</code>：单精度浮点数</li>
+  <li><code class="language-plaintext highlighter-rouge">double</code>：双精度浮点数</li>
+  <li><code class="language-plaintext highlighter-rouge">char</code>：字符类型</li>
+</ul>
+
+<p>示例代码：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">75</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159265359</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">grade</span> <span class="o">=</span> <span class="sc">'A'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="3-控制结构">3. 控制结构</h2>
+
+<h3 id="条件语句">条件语句</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"及格</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"不及格</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="循环语句">循环语句</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// for循环</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// while循环</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="4-函数定义">4. 函数定义</h2>
+
+<p>函数是C语言中的重要组成部分：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 函数调用</span>
+<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"5 + 3 = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="5-数组">5. 数组</h2>
+
+<p>数组用于存储相同类型的多个数据：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d "</span><span class="p">,</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="6-指针基础">6. 指针基础</h2>
+
+<p>指针是C语言的特色之一：</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>  <span class="c1">// 获取x的地址</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"x的值：%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr</span><span class="p">);</span>  <span class="c1">// 通过指针访问x的值</span>
+</code></pre></div></div>
+
+<h2 id="总结">总结</h2>
+
+<p>本文介绍了C语言的基础语法知识，包括：</p>
+<ul>
+  <li>程序基本结构</li>
+  <li>变量和数据类型</li>
+  <li>控制结构</li>
+  <li>函数定义</li>
+  <li>数组使用</li>
+  <li>指针基础</li>
+</ul>
+
+<p>掌握这些基础知识后，您就可以开始编写简单的C语言程序了。在下一篇文章中，我们将深入探讨C语言的更多高级特性。</p>
+
+<h2 id="练习建议">练习建议</h2>
+
+<ol>
+  <li>尝试编写一个计算两个数之和的程序</li>
+  <li>使用循环打印九九乘法表</li>
+  <li>实现一个简单的数组排序程序</li>
+</ol>
+
+<p>记住：编程最重要的是实践，多写代码才能更好地掌握这些概念。</p>

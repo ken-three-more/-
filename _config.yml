@@ -4,9 +4,25 @@ baseurl: ""  # 如果没有部署在子目录中，保持为空
 url: "https://ken-three-more.github.io/my-blog"
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # 页面配置
 permalink: /:year/:month/:day/:title/
 paginate: 5
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
 
 author:
   name: 博主名字

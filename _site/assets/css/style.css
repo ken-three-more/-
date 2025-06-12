@@ -1,85 +1,104 @@
-/* 基本页面设置 */
+/* 全局样式 */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "微软雅黑", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* 页面头部设置 */
-header {
-    background-color: #3498db;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-/* 导航栏设置 */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* 文章内容区域 */
-article {
-    padding: 20px;
-    margin-top: 30px;
-}
-
-article h2 {
-    font-size: 2em;
-    color: #333;
-}
-
-article p {
     line-height: 1.6;
+    color: #333;
+    background: #f8f8f8;
 }
 
-/* 页脚 */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: 30px;
+/* 导航栏样式 */
+header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-footer a {
-    color: #3498db;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
     text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-footer a:hover {
-    text-decoration: underline;
+nav a:hover {
+    background: #f0f0f0;
+    color: #3498db;
 }
 
-/* 图片 */
-img {
+/* 主要内容区域 */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* 文章列表样式 */
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-item {
+    background: #fff;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-item h2 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #666;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+}
+
+/* 图片样式 */
+.blog-image {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 20px 0;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    main {
+        margin: 1rem auto;
+    }
 }

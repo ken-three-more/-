@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>归档 | 我的博客</title>
+    <title>归档 | 我的个人博客</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>归档 | 我的个人博客</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="归档" />
+<meta name="author" content="博主名字" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="记录我的学习和生活" />
+<meta property="og:description" content="记录我的学习和生活" />
+<link rel="canonical" href="http://0.0.0.0:4000/archive/" />
+<meta property="og:url" content="http://0.0.0.0:4000/archive/" />
+<meta property="og:site_name" content="我的个人博客" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="归档" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"博主名字"},"description":"记录我的学习和生活","headline":"归档","url":"http://0.0.0.0:4000/archive/"}</script>
+<!-- End Jekyll SEO tag -->
+
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="http://localhost:4000">首页</a></li>
-                <li><a href="/about.html">关于</a></li>
-                <li><a href="/archive.html">归档</a></li>
-                <li><a href="">所有文章</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/about/">关于</a></li>
+                <li><a href="/archive/">归档</a></li>
             </ul>
         </nav>
     </header>
@@ -22,26 +39,193 @@
         <article>
             <header>
                 <h1>归档</h1>
-                <p class="post-meta">
-                    <time datetime=""></time>
-                    
-                </p>
+                
             </header>
 
             <div class="content">
                 <section class="archive">
     <h2>文章归档</h2>
-    <ul>
-        
-    </ul>
+    <div class="archive-description">
+        <p>这里收录了所有博客文章，按时间倒序排列。点击文章标题可以阅读全文。</p>
+    </div>
+
+    
+    
+        <div class="archive-year">
+            <h3 class="year-title">2024</h3>
+            <div class="archive-list">
+                
+                    <article class="archive-item">
+                        <div class="archive-item-content">
+                            <time class="archive-date" datetime="2024-03-21T10:00:00+08:00">
+                                03月21日
+                            </time>
+                            <h4 class="archive-title">
+                                <a href="/2024/03/21/c-pointers-memory/">深入理解C语言指针与内存管理</a>
+                            </h4>
+                            
+                                <div class="archive-categories">
+                                    
+                                        <span class="category-tag">编程语言</span>
+                                    
+                                        <span class="category-tag">C语言</span>
+                                    
+                                </div>
+                            
+                        </div>
+                    </article>
+                
+                    <article class="archive-item">
+                        <div class="archive-item-content">
+                            <time class="archive-date" datetime="2024-03-20T10:00:00+08:00">
+                                03月20日
+                            </time>
+                            <h4 class="archive-title">
+                                <a href="/2024/03/20/c-language-basics/">C语言基础语法入门</a>
+                            </h4>
+                            
+                                <div class="archive-categories">
+                                    
+                                        <span class="category-tag">编程语言</span>
+                                    
+                                        <span class="category-tag">C语言</span>
+                                    
+                                </div>
+                            
+                        </div>
+                    </article>
+                
+            </div>
+        </div>
+    
 </section>
+
+<style>
+.archive {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.archive h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.archive-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.archive-year {
+    margin-bottom: 3rem;
+}
+
+.year-title {
+    color: #34495e;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.archive-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.archive-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.archive-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.archive-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.archive-title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.archive-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.archive-title a:hover {
+    color: #3498db;
+}
+
+.archive-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease;
+}
+
+.category-tag:hover {
+    background: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .archive {
+        padding: 1rem;
+    }
+
+    .archive h2 {
+        font-size: 1.5rem;
+    }
+
+    .year-title {
+        font-size: 1.3rem;
+    }
+
+    .archive-item {
+        padding: 0.8rem;
+    }
+
+    .archive-title {
+        font-size: 1.1rem;
+    }
+}
+</style>
 
             </div>
         </article>
     </main>
 
     <footer>
-        <p>© 2024 我的博客 • 转载请注明出处</p>
+        <p>&copy; 2025 我的个人博客 • 转载请注明出处</p>
     </footer>
 </body>
 </html>

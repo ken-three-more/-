@@ -6,12 +6,155 @@ permalink: /archive/
 
 <section class="archive">
     <h2>文章归档</h2>
-    <ul>
-        {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <span style="color:#888;font-size:0.9em;">({{ post.date | date: "%Y-%m-%d" }})</span>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="archive-description">
+        <p>这里收录了所有博客文章，按时间倒序排列。点击文章标题可以阅读全文。</p>
+    </div>
+
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in posts_by_year %}
+        <div class="archive-year">
+            <h3 class="year-title">{{ year.name }}</h3>
+            <div class="archive-list">
+                {% for post in year.items %}
+                    <article class="archive-item">
+                        <div class="archive-item-content">
+                            <time class="archive-date" datetime="{{ post.date | date_to_xmlschema }}">
+                                {{ post.date | date: "%m月%d日" }}
+                            </time>
+                            <h4 class="archive-title">
+                                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                            </h4>
+                            {% if post.categories %}
+                                <div class="archive-categories">
+                                    {% for category in post.categories %}
+                                        <span class="category-tag">{{ category }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
 </section>
+
+<style>
+.archive {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.archive h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.archive-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.archive-year {
+    margin-bottom: 3rem;
+}
+
+.year-title {
+    color: #34495e;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.archive-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.archive-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.archive-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.archive-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.archive-title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.archive-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.archive-title a:hover {
+    color: #3498db;
+}
+
+.archive-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease;
+}
+
+.category-tag:hover {
+    background: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .archive {
+        padding: 1rem;
+    }
+
+    .archive h2 {
+        font-size: 1.5rem;
+    }
+
+    .year-title {
+        font-size: 1.3rem;
+    }
+
+    .archive-item {
+        padding: 0.8rem;
+    }
+
+    .archive-title {
+        font-size: 1.1rem;
+    }
+}
+</style>
