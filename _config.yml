@@ -1,0 +1,14 @@
+title: 我的个人博客
+description: 记录我的学习和生活
+baseurl: ""  # 如果没有部署在子目录中，保持为空
+url: "https://your-username.github.io"  # 替换为你的 GitHub Pages URL
+theme: minima
+plugins:
+  - jekyll-paginate
+# 页面配置
+permalink: /:year/:month/:day/:title/
+paginate: 5
+
+author:
+  name: 博主名字
+  email: example@example.com

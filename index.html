@@ -1,0 +1,26 @@
+---
+layout: default
+title: 我的个人博客
+---
+
+<h1>欢迎来到我的个人博客！</h1>
+<p>这里会展示所有的博客文章。</p>
+{{content}}
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.date | date: "%Y-%m-%d" }}</p>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+<style>
+  body { font-family: "微软雅黑", Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; }
+  h1 { color: #2c3e50; }
+  ul { list-style: none; padding: 0; }
+  li { background: #fff; margin: 20px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px #eee; }
+  a { text-decoration: none; color: #3498db; }
+  a:hover { text-decoration: underline; }
+</style>

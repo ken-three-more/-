@@ -1,0 +1,6 @@
+@use "sass:color";
+@use "minima" as *;
+
+// 替换废弃的 lighten 和 darken
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%);
